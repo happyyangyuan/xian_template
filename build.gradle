@@ -1,0 +1,44 @@
+import java.text.SimpleDateFormat
+
+subprojects {
+    apply plugin: 'java'
+    group "$myGroup"
+    version new SimpleDateFormat('yyyyMMddHHmmss').format(new Date())
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.+'
+        compile group: 'info.xiancloud', name: 'xian-core', version: "${xianVersion}"
+    }
+    apply plugin: 'maven'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    repositories {
+        jcenter()
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    task copyPlugins(type: Sync) {
+        from configurations.runtime
+        into 'plugins'
+    }
+
+    if (project.file('WebRoot').exists()) {
+        println 'web detected:' + project.name
+        println '在xian_runtime/<application>/build.gradle内增加一行 runtime "info.xiancloud:xian-jettyweb:${xianVersion}" 来定义一个webApplication'
+        apply plugin: 'war'
+        dependencies {
+            providedRuntime group: 'info.xiancloud', name: 'xian-core', version: "${xianVersion}"
+        }
+        configurations {
+            war {
+                archiveName 'web.war'
+                from 'WebRoot'
+            }
+        }
+        artifacts {
+            war tasks.war
+        }
+    }
+}
+
+
