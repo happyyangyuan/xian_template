@@ -1,3 +1,4 @@
 dependencies {
     runtime "info.xiancloud:xian-jettyweb:${xianVersion}"
+    runtime project(path: ':demo_web_plugin01', configuration: "war")
 }
