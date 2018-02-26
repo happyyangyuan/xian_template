@@ -5,7 +5,8 @@ subprojects {
         runtime group: 'info.xiancloud', name: 'xian-gelf-common', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-zookeeper', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-rpcNettyClient', version: "$xianVersion"
-        runtime group: 'info.xinacloud', name: 'xian-rpcNettyServer', version: "$xianVersion"
+        runtime group: 'info.xiancloud', name: 'xian-rpcNettyServer', version: "$xianVersion"
+        runtime group: 'info.xiancloud', name: 'xian-httpclient', version: "$xianVersion"
     }
 }
 
