@@ -1,5 +1,6 @@
 dependencies {
     runtime group: 'info.xiancloud', name: 'xian-gateway', version: "$xianVersion"
+    compile group: 'info.xiancloud', name: 'xian-nettyhttpserver', version:  "$xianVersion"
     runtime group: 'info.xiancloud', name: 'xian-ruleengine', version: "$xianVersion"
     compile group: 'info.xiancloud', name: 'xian-apifestOauth20', version: "$xianVersion"
     compile group: 'info.xiancloud', name: 'xian-apifestOauth20Api', version: "$xianVersion"

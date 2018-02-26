@@ -1,6 +1,6 @@
-package com.yourcompany.demoplugin01.unit;
+package com.yourcompany.demoplugin02.unit;
 
-import com.yourcompany.demoplugin01.DemoPlugin01Group;
+import com.yourcompany.demoplugin02.DemoGroup02;
 import info.xiancloud.plugin.Group;
 import info.xiancloud.plugin.Input;
 import info.xiancloud.plugin.Unit;
@@ -10,24 +10,24 @@ import info.xiancloud.plugin.message.UnitResponse;
 /**
  * Created by happyyangyuan at 2018/2/26
  */
-public class TestUnit implements Unit {
+public class DemoUnit02 implements Unit {
     @Override
     public String getName() {
-        return "test";
+        return "demoUnit02";
     }
 
     @Override
     public Input getInput() {
-        return null;
+        return Input.create().add("param", String.class, "必填参数", REQUIRED);
     }
 
     @Override
     public Group getGroup() {
-        return DemoPlugin01Group.singleton;
+        return DemoGroup02.singleton;
     }
 
     @Override
     public UnitResponse execute(UnitRequest msg) {
-        return UnitResponse.success("hello world.");
+        return UnitResponse.success(msg.get("param"));
     }
 }

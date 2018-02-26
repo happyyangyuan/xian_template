@@ -10,6 +10,6 @@ public class DemoPlugin01Group implements Group {
 
     @Override
     public String getName() {
-        return "demoPlugin";
+        return "demoGroup01";
     }
 }
