@@ -4,6 +4,7 @@ import com.yourcompany.demoplugin01.unit.DemoUnit01;
 import info.xiancloud.plugin.message.Xian;
 import org.junit.Test;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
 /**
@@ -12,7 +13,7 @@ import java.util.HashMap;
 public class DemoUnitTest {
 
     @Test
-    public void demoUnitTest() {
-        Xian.call(DemoUnit01.class, new HashMap<>());
+    public void demoUnitTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        System.out.println(Xian.call(DemoUnit01.class, new HashMap<>()).toVoJSONString());
     }
 }
