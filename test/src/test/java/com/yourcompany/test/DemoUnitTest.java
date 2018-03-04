@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class DemoUnitTest {
 
     @Test
-    public void demoUnitTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public void demoUnitTest() {
         System.out.println(Xian.call(DemoUnit01.class, new HashMap<>()).toVoJSONString());
     }
 }
