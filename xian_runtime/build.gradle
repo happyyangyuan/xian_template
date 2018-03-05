@@ -2,7 +2,7 @@ subprojects {
     dependencies {
         runtime group: 'info.xiancloud', name: 'xian-core', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-log4j2', version: "$xianVersion"
-        /*runtime group: 'info.xiancloud', name: 'xian-gelf-common', version: "$xianVersion" gelf client should not imported by default.*/
+        runtime group: 'info.xiancloud', name: 'xian-gelf-common', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-zookeeper', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-rpcNettyClient', version: "$xianVersion"
         runtime group: 'info.xiancloud', name: 'xian-rpcNettyServer', version: "$xianVersion"
