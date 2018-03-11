@@ -1,0 +1,7 @@
+dependencies {
+    runtime "info.xiancloud:xian-apidoc:$xianVersion"
+    /*
+    runtime "info.xiancloud:xian-jettyweb:${xianVersion}"
+    runtime "info.xiancloud:xian-apidoc-web:$xianVersion"
+    */
+}

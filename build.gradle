@@ -14,6 +14,9 @@ subprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
     }
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
@@ -25,14 +28,12 @@ subprojects {
 
     if (project.file('WebRoot').exists()) {
         println 'web detected:' + project.name
-        println '在xian_runtime/<application>/build.gradle内增加一行 runtime "info.xiancloud:xian-jettyweb:${xianVersion}" 来定义一个webApplication'
         apply plugin: 'war'
         dependencies {
             providedRuntime group: 'info.xiancloud', name: 'xian-core', version: "${xianVersion}"
         }
         configurations {
             war {
-                archiveName 'web.war'
                 from 'WebRoot'
             }
         }
