@@ -5,8 +5,8 @@ import info.xiancloud.plugin.Group;
 /**
  * Created by happyyangyuan at 2018/2/26
  */
-public class DemoPlugin01Group implements Group {
-    public static final DemoPlugin01Group singleton = new DemoPlugin01Group();
+public class DemoGroup01 implements Group {
+    public static final DemoGroup01 singleton = new DemoGroup01();
 
     @Override
     public String getName() {

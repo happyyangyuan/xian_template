@@ -1,7 +1,7 @@
 package com.yourcompany.demoplugin01.unit;
 
 import com.alibaba.fastjson.JSONObject;
-import com.yourcompany.demoplugin01.DemoPlugin01Group;
+import com.yourcompany.demoplugin01.DemoGroup01;
 import info.xiancloud.plugin.Group;
 import info.xiancloud.plugin.Input;
 import info.xiancloud.plugin.Unit;
@@ -25,7 +25,7 @@ public class DemoUnit01 implements Unit {
 
     @Override
     public Group getGroup() {
-        return DemoPlugin01Group.singleton;
+        return DemoGroup01.singleton;
     }
 
     @Override
