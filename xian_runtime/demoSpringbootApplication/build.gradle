@@ -1,0 +1,6 @@
+dependencies {
+    runtime(project(':demo_springboot_plugin')) {
+        println 'Solve spring and xian-frame logging conflicts, important!'
+        exclude module: 'spring-boot-starter-logging'
+    }
+}

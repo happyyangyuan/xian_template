@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: your-application-name
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  http:
+    encoding:
+      charset: UTF-8  # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly.
+      enabled: true # Enable http encoding support.
+      force: true # Force the encoding to the configured charset on HTTP requests and responses.
