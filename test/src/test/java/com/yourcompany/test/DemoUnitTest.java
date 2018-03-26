@@ -1,10 +1,10 @@
 package com.yourcompany.test;
 
-import info.xiancloud.plugin.Unit;
-import info.xiancloud.plugin.distribution.exception.UnitOfflineException;
-import info.xiancloud.plugin.distribution.exception.UnitUndefinedException;
-import info.xiancloud.plugin.distribution.loadbalance.UnitRouter;
-import info.xiancloud.plugin.message.Xian;
+import info.xiancloud.core.Unit;
+import info.xiancloud.core.distribution.exception.UnitOfflineException;
+import info.xiancloud.core.distribution.exception.UnitUndefinedException;
+import info.xiancloud.core.distribution.loadbalance.UnitRouter;
+import info.xiancloud.core.message.Xian;
 import org.junit.Test;
 
 import java.util.HashMap;

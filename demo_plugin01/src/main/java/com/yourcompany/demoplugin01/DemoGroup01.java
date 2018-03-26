@@ -1,6 +1,6 @@
 package com.yourcompany.demoplugin01;
 
-import info.xiancloud.plugin.Group;
+import info.xiancloud.core.Group;
 
 /**
  * Created by happyyangyuan at 2018/2/26
