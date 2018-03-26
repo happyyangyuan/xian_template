@@ -1,7 +1,7 @@
 package com.yourcomany.demospringbootplugin;
 
-import info.xiancloud.plugin.init.IStartService;
-import info.xiancloud.plugin.util.EnvUtil;
+import info.xiancloud.core.init.IStartService;
+import info.xiancloud.core.util.EnvUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
