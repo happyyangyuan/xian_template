@@ -1,6 +1,6 @@
 dependencies {
     for (p in rootProject.subprojects) {
-        if (p.path != project.path) {
+        if (p.path != project.path && !p.path.contains("springboot")) {//don't scan springboot packages.
             compile project(p.path)
         }
     }

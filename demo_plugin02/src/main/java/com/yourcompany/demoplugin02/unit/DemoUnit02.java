@@ -2,6 +2,7 @@ package com.yourcompany.demoplugin02.unit;
 
 import com.yourcompany.demoplugin02.DemoGroup02;
 import info.xiancloud.core.Group;
+import info.xiancloud.core.Handler;
 import info.xiancloud.core.Input;
 import info.xiancloud.core.Unit;
 import info.xiancloud.core.message.UnitRequest;
@@ -27,7 +28,7 @@ public class DemoUnit02 implements Unit {
     }
 
     @Override
-    public UnitResponse execute(UnitRequest msg) {
-        return UnitResponse.success(msg.get("param"));
+    public void execute(UnitRequest request, Handler<UnitResponse> handler) {
+        handler.handle(UnitResponse.createSuccess(request.get("param")));
     }
 }
