@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat
 subprojects {
     apply plugin: 'java'
     group "com.company"
-    version new SimpleDateFormat('yyyyMMddHHmmss').format(new Date())
+    version new SimpleDateFormat('yyyyMMdd.HHmmss').format(new Date())
     dependencies {
         testCompile group: 'junit', name: 'junit', version: '4.+'
         compile group: 'info.xiancloud', name: 'xian-core', version: "${xianVersion}"
