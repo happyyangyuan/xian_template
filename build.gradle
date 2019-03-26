@@ -17,6 +17,9 @@ subprojects {
         maven {
             url "https://oss.sonatype.org/content/repositories/snapshots"
         }
+        maven {
+            url "https://nexus.cedarhd.com/repository/maven-public/"
+        }
     }
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
