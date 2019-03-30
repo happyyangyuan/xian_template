@@ -2,7 +2,7 @@ stages:
 - name: 编译
   steps:
   - runScriptConfig:
-      image: gradle:5.3.1-jre8-alpine
+      image: gradle:5.3-jre8-slim
       shellScript: ./xian_runtime/buildAll.sh
 - name: 镜像
   steps:
