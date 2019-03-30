@@ -41,3 +41,21 @@ spec:
         workingDir: /data/workspace/xian_runtime/demoGateway
       imagePullSecrets:
       - name: xiancloud
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apigateway
+  namespace: publicservice-${CICD_GIT_BRANCH}-infrastructures
+spec:
+  ports:
+  - name: default
+    nodePort: 32270
+    port: 9123
+    protocol: TCP
+    targetPort: 9123
+  selector:
+    workload.user.cattle.io/workloadselector: deployment-publicservice-${CICD_GIT_BRANCH}-apigateway
+  sessionAffinity: None
+  type: NodePort
