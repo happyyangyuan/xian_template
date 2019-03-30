@@ -37,7 +37,7 @@ spec:
         resources:
           limits:
             # modify this limit in your production environment
-            memory: 200Mi
+            memory: 400Mi
         workingDir: /data/workspace/xian_runtime/demoGateway
       imagePullSecrets:
       - name: xiancloud
