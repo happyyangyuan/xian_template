@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: xiancloud/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: harbor.cedarhd.com
+      registry: index.docker.io
 - name: 发布
   steps:
   - applyYamlConfig:
